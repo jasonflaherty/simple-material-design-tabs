@@ -17,6 +17,8 @@ I really, really like the way the tabs on the https://material.angularjs.org/lat
 
 Clone the repository and run on your localhost.
 
+git clone https://github.com/jasonflaherty/simple-material-design-tabs.git
+
 The javascript in place requires jquery, but has only a few lines of code (of which I am sure there can be a better more graceful implementation). 
 
     <script>
