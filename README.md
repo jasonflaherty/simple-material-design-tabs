@@ -1,4 +1,3 @@
-# simple-material-design-tabs
 Simple Material Tabs
 ===================
 
