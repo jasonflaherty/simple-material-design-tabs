@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+    <title>Super Heros in Tabs</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="tabui">
+        <ul id="tabs" class="tabs">
+            <li>Aquaman</li>
+            <li>Ares</li>
+            <li>Bane</li>
+            <li>Captain America</li>
+            <li>Black Adam</li>
+            <li>Cat Woman</li>
+            <li>Cyborg</li>
+            <li>Deathstroke</li>
+            <li>Doomsday</li>
+            <li>Flash</li>
+        </ul>
+        <div id="tabcontent">
+            <div>Aquaman is a fictional superhero appearing in American comic books published by DC Comics. Created by Paul Norris and Mort Weisinger, the character debuted in More Fun Comics #73 (November 1941).[1] Initially a backup feature in DC's anthology titles, Aquaman later starred in several volumes of a solo title. During the late 1950s and 1960s superhero-revival period known as the Silver Age, he was a founding member of the Justice League of America. In the 1990s Modern Age, Aquaman's character became more serious than in most previous interpretations, with storylines depicting the weight of his role as king of Atlantis.[2]</div>
+            <div>Ares is a fictional character appearing in DC Comics publications and related media. Based upon the Greek mythological figure of the same name, he is the Greek god of war and a major adversary of Wonder Woman. Ares first appeared in Wonder Woman #1, volume 1, published in the summer of 1942, written by Wonder Woman creator William Moulton Marston. In the very next issue,[1] he reappeared under his Roman name, Mars. He would retain this name until February 1987,[2] when comics writer/artist George Pérez restored the Greek name Ares as part of his reboot of the Wonder Woman mythos. As the narrative continuity of Wonder Woman comics have been adjusted by different writers throughout the years, various versions of Mars/Ares, with various personalities and physical appearances, have been presented, though most have been depicted wearing Greek hoplite or Roman gladiator armor. One of the character's longest-running looks, designed by George Pérez (at right), is that of a red-eyed Greek warrior clad in black and blue battle armor, face hidden by an attic helmet. The current New 52 version of the character, designed by artist Cliff Chiang and introduced in 2011, has the appearance of an older man with a long white beard and pitch black eyes. He wears a disheveled 20th Century man's tropical suit, his bare feet permanently smeared with blood.</div>
+            <div>Bane is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character's origin was in Batman: Vengeance of Bane #1 (January 1993), and was created by Chuck Dixon, Doug Moench, and Graham Nolan. Known for his mix of brute strength and exceptional intelligence, the character is often credited as being the only villain to have "Broken the Bat", making him one of Batman's most physically and intellectually powerful foes. IGN's list of the Top 100 Comic Book Villains of All Time ranked Bane as #34.[1] Bane was portrayed by Robert Swenson in the 1997 film Batman & Robin, and by Tom Hardy as the main antagonist in the 2012 film The Dark Knight Rises.</div>
+            <div>Fighting for the red, white and blue for over 60 years, Captain America is the living, breathing symbol of freedom and liberty. Earths Mightiest Heroes reunite with their biggest guns at the forefront to take on familiar enemies and new threats alike. Looking for the one superhero comic you just have to read. Striker.</div>
+            <div>Black Adam is a fictional supervillain appearing in American comic books published by DC Comics, and is a primary adversary of the superhero Shazam, formerly known as Captain Marvel. Black Adam was created by Otto Binder and C. C. Beck in 1945 as a one-shot villain for the first issue of Fawcett Comics' The Marvel Family comic book; however, Black Adam was revived as a recurring character after DC Comics first licensed and then acquired the Fawcett characters and began publishing Captain Marvel/Marvel Family stories under the title Shazam! in the 1970s.</div>
+            <div>Catwoman (Selina Kyle) is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. The character was created by Bob Kane and Bill Finger, and made her debut in Batman #1 (Spring 1940), in which she is known as "the Cat". Catwoman has traditionally been portrayed as a supervillain and adversary of Batman, but since the 1990s, she has been featured in an eponymous series that cast her as an antiheroine rather than a traditional villain. Catwoman is known for having a complex love-hate relationship with Batman and has been Batman's most enduring love interest.[2]</div>
+            <div>Cyborg is a fictional superhero appearing in American comic books published by DC Comics. The character was created by writer Marv Wolfman and artist George Pérez, and first appears in a special insert in DC Comics Presents #26 (October 1980). Cyborg is best known as a member of the Teen Titans.[1] However, in September 2011, Cyborg was established as a founding member of the Justice League as part of DC's 2011 reboot of its continuity.</div>
+            <div>Deathstroke (real name Slade Joseph Wilson) is a fictional supervillain, and sometimes a reluctant antihero, who appears in comic books published by DC Comics. The character was created by Marv Wolfman and George Perez. He is a mercenary and assassin who first appeared in The New Teen Titans (vol. 1) #2 (1980).[1] Wizard magazine rated him the 24th greatest villain of all time and the 32nd greatest comic book character of all time.[2] Also, in 2009, Deathstroke was ranked as IGN's 32nd greatest comic book villain of all time.[3]</div>
+            <div>Doomsday is a fictional supervillain appearing in American comic books published by DC Comics, commonly in association with Superman. Doomsday made a cameo appearance in Superman: The Man of Steel #17 (November 1992) and made his first full appearance in Superman: The Man of Steel #18 (December 1992). The character was created by writer-artist Dan Jurgens, who wanted to create a villain who could be a physical challenge for Superman in a straight fight as most of his current foes relied on technology and intellect to oppose the Man of Steel, or, in the case of Metallo and the Parasite, had some natural advantage.</div>
+            <div>The Flash is a superhero appearing in American comic books published by DC Comics. Barry Allen is the second and most recognized character known as the Flash. The character first appeared in Showcase #4 (October 1956), created by writer Robert Kanigher and penciler Carmine Infantino.[1] His name combines talk show hosts Barry Gray and Steve Allen.[2]</div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $("#tabcontent div").hide();
+        $("#tabcontent div:eq('0')").show();
+        $("ul#tabs li:eq('0')").addClass("active");
+
+        $("li").click(function() {
+            var i = $(this).index();
+            $("#tabcontent div:not(:eq(" + i + "))").hide();
+            $("#tabcontent div:eq(" + i + ")").fadeToggle("slow", "linear");
+            centerLI(this, 'ul#tabs');
+            $("li").each(function() {
+                $(this).removeClass('active');
+            });
+            $(this).addClass("active");
+
+        });
+
+         //http://stackoverflow.com/a/33296765/350421
+        function centerLI(target, outer) {
+            var out = $(outer);
+            var tar = $(target);
+            var x = out.width() - 50;
+            var y = tar.outerWidth(true);
+            var z = tar.index();
+            var q = 0;
+            var m = out.find('li');
+            for (var i = 0; i < z; i++) {
+                q += $(m[i]).outerWidth(true);
+            }
+            //out.scrollLeft(Math.max(0, q - (x - y)/2));
+            out.animate({
+                scrollLeft: Math.max(0, q - (x - y) / 2)
+            }, 500);
+
+        }
+    </script>
+</body>
+
+</html>
