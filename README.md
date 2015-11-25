@@ -5,6 +5,9 @@ A simple jquery/css implementation of the horizontal scrolling tabs from the mat
 
 I really, really like the way the tabs on the https://material.angularjs.org/latest/demo/tabs demo work, but I am not using this library in my project. I needed the same type of functionality, so with the help of the interwebs, I wrote this simple demo. Please fork and improve on it! 
 
+###Demo
+
+http://codepen.io/jasonflaherty/pen/qOGgmp
 ----------
 
 > **Coming Soon Ideas:**
@@ -64,8 +67,3 @@ The javascript in place requires jquery, but has only a few lines of code (of wh
 
         }
     </script>
-
-###Known Issues
-
- - Click a tab 2x toggle hides div.
- - On Mobile, Overflow not touch swipeable... 
