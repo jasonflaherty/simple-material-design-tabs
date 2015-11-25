@@ -67,3 +67,5 @@ The javascript in place requires jquery, but has only a few lines of code (of wh
 
         }
     </script>
+    
+### All Superheros info from Wikipedia.
