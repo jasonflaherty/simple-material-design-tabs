@@ -12,8 +12,11 @@ body {
 ul#tabs {
     margin-bottom:15px;
     white-space: nowrap;
-    padding-left:0;
-    overflow-x:hidden;
+    overflow-x:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+ul#tabs::-webkit-scrollbar {
+    width: 0 !important;
 }
 ul#tabs li {
     display:inline-block;
